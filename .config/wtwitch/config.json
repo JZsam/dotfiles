@@ -1,0 +1,95 @@
+{
+  "player": "mpv",
+  "quality": "720p,720p_alt,720p60,720p60_alt,480p,best",
+  "colors": "true",
+  "printOfflineSubscriptions": "false",
+  "subscriptions": [
+    {
+      "streamer": "zeospantara"
+    },
+    {
+      "streamer": "princesspastah"
+    },
+    {
+      "streamer": "trashtastepodcast"
+    },
+    {
+      "streamer": "hajime"
+    },
+    {
+      "streamer": "disrupty2k38"
+    },
+    {
+      "streamer": "sharukakaribu"
+    },
+    {
+      "streamer": "noriyarojapan"
+    },
+    {
+      "streamer": "moistcr1tikal"
+    },
+    {
+      "streamer": "codemiko"
+    },
+    {
+      "streamer": "gamingoncaffeine"
+    },
+    {
+      "streamer": "apricot"
+    },
+    {
+      "streamer": "nyanners"
+    },
+    {
+      "streamer": "the8bitdrummer"
+    },
+    {
+      "streamer": "projektmelody"
+    },
+    {
+      "streamer": "suopontwitch"
+    },
+    {
+      "streamer": "f1nn5ter"
+    },
+    {
+      "streamer": "phoenixsclive"
+    },
+    {
+      "streamer": "salvner"
+    },
+    {
+      "streamer": "linustech"
+    },
+    {
+      "streamer": "docm77live"
+    },
+    {
+      "streamer": "ilmango"
+    },
+    {
+      "streamer": "speedrun"
+    },
+    {
+      "streamer": "dwangoac"
+    },
+    {
+      "streamer": "polygon"
+    },
+    {
+      "streamer": "bobross"
+    },
+    {
+      "streamer": "hungry"
+    },
+    {
+      "streamer": "itseliot_"
+    },
+    {
+      "streamer": "zeospantera"
+    }
+  ],
+  "lastSubscriptionUpdate": "1615061271",
+  "apiToken": "4l40dekmy42qya1pnuzck0561mzru6",
+  "apiTokenExpiry": "1615144240"
+}
