@@ -183,4 +183,4 @@
        :config
        ;;literate
        (default +bindings +smartparens))
- (set-frame-parameter (selected-frame) 'alpha 70)
+ (set-frame-parameter (selected-frame) 'alpha 70);;70

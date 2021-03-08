@@ -759,10 +759,11 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
-format-foreground = #fefefe
-format-background = #8d62ad
+format-foreground = #abb2bf
 format-prefix = "  "
 format-prefix-foreground = #fefefe
+format-background = #282c34
+format-underline = #8d62ad
 
 
 [module/aur-updates]
@@ -831,25 +832,29 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 99
+format-prefix-foreground = #
 
 format-charging-prefix = "CHARG"
 format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%%
-format-charging-foreground = #fefefe
-format-charging-background = #668bd7
-format-charging-prefix-foreground = #fefefe
+format-charging-foreground = #abb2bf
+format-charging-background = #282c34
+format-charging-underline = #668bd7
+format-charging-prefix-foreground = #abb2bf
 
 format-discharging-prefix = "DIS "
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-format-discharging-foreground = #fefefe
-format-discharging-background = #668bd7
-format-discharging-prefix-foreground = #fefefe
+format-discharging-foreground = #abb2bf
+format-discharging-background = #282c34
+format-discharging-underline = #668bd7
+format-discharging-prefix-foreground = #df2e2e
 
 format-full-prefix = "FULL "
-format-full-prefix-foreground = #fefefe
-format-full-foreground = #fefefe
-format-full-background = #668bd7
+format-full-prefix-foreground = #abb2bf
+format-full-foreground = #abb2bf
+format-full-background = #00ce33
+format-full-underline = #56c510
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -945,10 +950,11 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = #fefefe
-format-background = #8d62ad
+format-foreground = #abb2bf
+format-background = #282c34
+format-underline = #8d62ad
 format-prefix = " "
-format-prefix-foreground = #fefefe
+format-prefix-foreground = #abb2bf
 
 label-font = 1
 
@@ -980,9 +986,10 @@ date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
 format-prefix = " "
-format-prefix-foreground = #fefefe
-format-foreground = #fefefe
-format-background = #668bd7
+format-prefix-foreground = #abb2bf
+format-foreground = #abb2bf
+format-background = #282c34
+format-underline = #668bd7
 label = "%date% %time% "
 
 #################################################################
@@ -1181,8 +1188,9 @@ label = %percentage_used%%
 format = Mem <label>
 format-prefix = " "
 format-prefix-foreground = #fefefe
-format-foreground = #fefefe
-format-background = #668bd7
+format-foreground = #abb2bf
+format-background = #282c34
+format-underline = #668bd7
 
 ################################################################################
 
@@ -1249,8 +1257,9 @@ label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = #fefefe
-format-connected-foreground = #fefefe
-format-connected-background = #8d62a9
+format-connected-foreground = #abb2bf
+format-connected-background = #282c34
+format-connected-underline = #8d62ad
 
 ################################################################################
 
@@ -1265,8 +1274,9 @@ label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "  "
 format-connected-prefix-foreground = #fefefe
-format-connected-foreground = #fefefe
-format-connected-background = #8d62ad
+format-connected-foreground = #abb2bf
+format-connected-background = #282c34
+format-connected-underline = #8d62ad
 
 ################################################################################
 
@@ -1293,8 +1303,9 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = #fefefe
-format-background = #668bd7
+format-foreground = #abb2bf
+format-background = #282c34
+format-underline = #668bd7
 
 
 
