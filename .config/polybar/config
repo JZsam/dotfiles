@@ -840,7 +840,7 @@ label-charging = %percentage%%
 format-charging-foreground = #abb2bf
 format-charging-background = #282c34
 format-charging-underline = #668bd7
-format-charging-prefix-foreground = #abb2bf
+format-charging-prefix-forground = #56c510
 
 format-discharging-prefix = "DIS "
 format-discharging = <ramp-capacity> <label-discharging>
@@ -851,10 +851,9 @@ format-discharging-underline = #668bd7
 format-discharging-prefix-foreground = #df2e2e
 
 format-full-prefix = "FULL "
-format-full-prefix-foreground = #abb2bf
 format-full-foreground = #abb2bf
-format-full-background = #00ce33
-format-full-underline = #56c510
+format-full-background = #282c34
+format-full-underline = #668bd7
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
