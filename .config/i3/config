@@ -326,4 +326,5 @@ exec --no-startup-id picom
 exec --no-startup-id mpd
 exec --no-startup-id syncthing --no-browser
 exec bash -c ~/.config/i3/scripts/./startCalc.sh
-exec bash -c sleep .5 && ~/.config/i3/scripts/./startMusic.sh
+exec sleep 3
+exec bash -c ~/.config/i3/scripts/./startMusic.sh
