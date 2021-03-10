@@ -323,8 +323,6 @@ exec --no-startup-id /usr/lib/kdeconnectd
 exec feh --bg-center ~/Pictures/wallpapers/0107.jpg
 exec /home/jzdoot/.config/polybar/./launch.sh
 exec --no-startup-id picom
-exec --no-startup-id mpd
 exec --no-startup-id syncthing --no-browser
 exec bash -c ~/.config/i3/scripts/./startCalc.sh
-exec sleep 3
-exec bash -c ~/.config/i3/scripts/./startMusic.sh
+exec sleep 3 && bash -c ~/.config/i3/scripts/./startMusic.sh

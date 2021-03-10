@@ -138,7 +138,8 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-neofetch
+#neofetch
+pfetch
 
 alias config='/usr/bin/git --git-dir=/home/jzdoot/.cfg/ --work-tree=/home/jzdoot'
 

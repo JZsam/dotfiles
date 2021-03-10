@@ -7,7 +7,7 @@
 * feh (image viewer)
 * mpv (video player)
 * i3 (window manager)
-* st (terminal emulator)
+* Luke Smith's st build(terminal emulator)
 * librwolf (browser)
 * ttrv (reddit)
 * polybar (bar for i3)
