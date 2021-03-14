@@ -19,3 +19,4 @@ i3-msg focus left
 i3-msg focus up
 i3-msg resize shrink width 9 px or 9 ppt
 i3-msg focus down
+#-e $(neofetch && fish)

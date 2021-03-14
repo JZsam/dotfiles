@@ -60,14 +60,14 @@ bindsym $mod+Shift+Return exec rofi -show run
 # Starting app hotkeys
 bindsym $mod+F2 exec $BROWSER
 bindsym $mod+Shift+F2 exec icecat
-bindsym $mod+ctrl+F2 exec torbrowser-launcher
-bindsym $mod+ctrl+Shift+F2 exec brave
+bindsym $mod+ctrl+Shift+F2 exec torbrowser-launcher
+bindsym $mod+ctrlF2 exec brave
 bindsym $mod+F3 exec thunar
 bindsym $mod+Shift+F3 exec $TERMINAL -e ranger /home/jzdoot
 bindsym $mod+Shift+p exec keepassxc
 bindsym $mod+F1 exec pavucontrol
 bindsym $mod+F4 exec thunderbird
-bindsym $mod+t exec telegram-desktop
+bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+F10 exec $EDITOR /home/jzdoot/.config/i3/config
 bindsym $mod+F9 exec bash -c /home/jzdoot/Script/./flex.sh
 bindsym $mod+F8 exec bash -c /home/jzdoot/Script/./fun.sh
@@ -86,6 +86,7 @@ bindsym $mod+ctrl+Shift+c exec ~/.config/i3/scripts/./protonvpnDisconnect.sh
 bindsym $mod+ctrl+Return exec $TERMINAL -e bash
 bindsym $mod+o exec ~/.config/i3/scripts/./monitorOn.sh
 bindsym $mod+Shift+o exec xrandr --output HDMI-A-0 --off
+bindsym $mod+t [class="(?i)term"] scratchpad show
 
 # focus window
 bindsym $mod+h focus left
@@ -319,10 +320,12 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 # Auto run
-exec --no-startup-id /usr/lib/kdeconnectd
-exec feh --bg-center ~/Pictures/wallpapers/0107.jpg
-exec /home/jzdoot/.config/polybar/./launch.sh
-exec --no-startup-id picom
-exec --no-startup-id syncthing --no-browser
-exec bash -c ~/.config/i3/scripts/./startCalc.sh
-exec sleep 3 && bash -c ~/.config/i3/scripts/./startMusic.sh
+exec_always --no-startup-id /usr/lib/kdeconnectd
+exec_always feh --bg-center ~/Pictures/wallpapers/0107.jpg
+exec_always /home/jzdoot/.config/polybar/./launch.sh
+exec_always --no-startup-id picom
+exec_always --no-startup-id syncthing --no-browser
+exec_always --no-startup-id mpd
+exec_always bash -c ~/.config/i3/scripts/./startCalc.sh
+exec_always bash -c ~/.config/i3/scripts/./startMusic.sh
+exec_always bash -c ~/.config/i3/scripts/./startTerm.sh
