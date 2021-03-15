@@ -327,5 +327,5 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id syncthing --no-browser
 exec_always --no-startup-id mpd
 exec_always bash -c ~/.config/i3/scripts/./startCalc.sh
-exec_always bash -c ~/.config/i3/scripts/./startMusic.sh
-exec_always bash -c ~/.config/i3/scripts/./startTerm.sh
+exec_always sleep 1 & bash -c ~/.config/i3/scripts/./startMusic.sh
+exec_always sleep 2 & bash -c ~/.config/i3/scripts/./startTerm.sh
