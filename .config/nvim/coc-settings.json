@@ -1,0 +1,24 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"css",
+		"markdown",
+		"javascript",
+		"graphql",
+		"html",
+		"yaml",
+		"json",
+		"python"
+	],
+	"java.enabled": true,
+	"java.home": "/usr/lib/jvm/java-16-openjdk",
+	"codeLens.enable": true,
+	"java.referencesCodeLens.enabled": true,
+	"java.implementationsCodeLens.enabled": false,
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"snippets.ultisnips.directories": [
+		"UltiSnips",
+		"~/.config/nvim/utils/snips"
+	],
+	"java.format.settings.url": "/home/jzdoot/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
+}
