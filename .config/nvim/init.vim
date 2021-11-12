@@ -19,6 +19,8 @@ Plug 'mboughaba/i3config.vim'
 Plug 'romgrk/doom-one.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'Python-mode/python-mode'
 Plug 'blankname/vim-fish'
@@ -27,11 +29,14 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
 Plug 'romgrk/doom-one.vim'
+Plug 'frenzyexists/aquarium-vim', { 'branch': 'develop' }
 
 call plug#end()
 " Color Scheme
 " set background=dark
-" colorscheme doom-one
+" colorscheme aquarium
+" let g:aquarium_style="dark"
+" let g:airline_theme="base16_aquarium_dark"
 " LSP Stuff 
 lua << EOF
 --[[require'lspconfig'.java_language_server.setup{
@@ -49,35 +54,41 @@ let g:fzf_layout = { 'down': '35%'} "setting fzf to open in a new buffer below
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " no auto comment on new line
 aug FileType java
 	au Filetype java set makeprg=javac\ -g\ % "sets the :make to the java compiler
-	au Filetype java map <leader>R :make<Return> :vsp<Return> :terminal java -cp $(pwd) Main<Return>
-	au Filetype java map <leader>r :vsp<Return> :terminal java -cp $(pwd) Main<Return>
+	au Filetype java map <leader>Rm :make<CR> :vsp<CR> :terminal java -cp $(pwd) Main<CR>
+	au Filetype java map <leader>Rh :cd %:p:h<CR> :vsp<CR> :term java -cp $(pwd) Main<CR>
+	au Filetype java map <leader>r :vsp<CR> :terminal java -cp $(pwd) Main<CR>
 aug end
 aug FileType lua
 	au Filetype lua set makeprg=luac5.2\ % "sets the :make to lua compiler
-	au Filetype lua map <leader>r :vsp<Return> :terminal lua5.2 %<Return>
+	au Filetype lua map <leader>r :vsp<CR> :terminal lua5.2 %<CR>
 aug end
 aug i3config_ft_detection "i3 config
   au!
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
+" Telescope
 " Other
 let g:javascript_plugin_flow = 1
 filetype plugin indent on
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 " Keybinds
 let mapleader =" "
-map <leader>. :Files<CR>
-map <leader>t :term fish<Return>
-map <leader>T :vsp<Return> :term fish<Return>
-map <leader>l :tabnext<Return>
-map <leader>h :tabprevious<Return>
-map <leader>n :tabnew<Return>
-map <leader>N :tabclose<Return>
-map <leader>m :make<Return>
-map <leader>c :copen<Return>
-map <leader><F10>e :sp<Return> :e ~/.config/nvim/init.vim<Return>
-map <leader><F10>s :source ~/.config/nvim/init.vim<Return>
-map <leader>` :Ex<Return>
-map <leader>~ :vsp<Return> :Ex<Return>
+" map <leader>. :Files<CR>
+map <leader>. :Telescope find_files<CR>
+map <leader>t :term fish<CR>
+map <leader>T :vsp<CR> :term fish<CR>
+map <leader>l :tabnext<CR>
+map <leader>h :tabprevious<CR>
+map <leader>n :tabnew<CR>
+map <leader>N :tabclose<CR>
+map <leader>m :make<CR>
+map <leader>c :copen<CR>
+map <leader><F10>e :sp<CR> :e ~/.config/nvim/init.vim<CR>
+map <leader><F10>s :source ~/.config/nvim/init.vim<CR>
+map <leader>` :Ex<CR>
+map <leader>~ :vsp<CR> :Ex<CR>
+map <leader>g :cd %:p:h<CR>
 "Sources
 source $HOME/.config/nvim/plug-config/coc.vim
+" lua require("jzdoot")
+source $HOME/.config/nvim/plug-config/telescope.vim

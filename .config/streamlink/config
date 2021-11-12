@@ -1,0 +1,4 @@
+player=mpv
+verbose-player
+default-stream=720p,720p_alt,720p60,720p60_alt,480p,best
+retry-open=3

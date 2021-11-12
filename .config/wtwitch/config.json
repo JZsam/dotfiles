@@ -1,0 +1,107 @@
+{
+  "player": "mpv",
+  "quality": "best",
+  "colors": "true",
+  "printOfflineSubscriptions": "false",
+  "subscriptions": [
+    {
+      "streamer": "zeospantera"
+    },
+    {
+      "streamer": "nuxtaku"
+    },
+    {
+      "streamer": "princesspastah"
+    },
+    {
+      "streamer": "veibae"
+    },
+    {
+      "streamer": "trashtastepodcast"
+    },
+    {
+      "streamer": "hajime"
+    },
+    {
+      "streamer": "distrupty2k38"
+    },
+    {
+      "streamer": "harukakaribu"
+    },
+    {
+      "streamer": "noriyarojapan"
+    },
+    {
+      "streamer": "moistcr1tikal"
+    },
+    {
+      "streamer": "codemiko"
+    },
+    {
+      "streamer": "gamingoncaffeine"
+    },
+    {
+      "streamer": "apricot"
+    },
+    {
+      "streamer": "nyanners"
+    },
+    {
+      "streamer": "ironmouse"
+    },
+    {
+      "streamer": "the8bitdrummer"
+    },
+    {
+      "streamer": "projectmelody"
+    },
+    {
+      "streamer": "suopontwitch"
+    },
+    {
+      "streamer": "f1nn5ter"
+    },
+    {
+      "streamer": "phoenixsclive"
+    },
+    {
+      "streamer": "salvner"
+    },
+    {
+      "streamer": "linustech"
+    },
+    {
+      "streamer": "docm77live"
+    },
+    {
+      "streamer": "illmango"
+    },
+    {
+      "streamer": "speedrun"
+    },
+    {
+      "streamer": "dwangoac"
+    },
+    {
+      "streamer": "polygon"
+    },
+    {
+      "streamer": "luke_lafr"
+    },
+    {
+      "streamer": "bobross"
+    },
+    {
+      "streamer": "hungry"
+    },
+    {
+      "streamer": "itseliot_"
+    },
+    {
+      "streamer": "theprimeagen"
+    }
+  ],
+  "apiToken": "pd942gpcbwv8qn2pduuxykw4i3dfk9",
+  "apiTokenExpiry": "1636676580",
+  "lastSubscriptionUpdate": "1636591880"
+}

@@ -1,0 +1,13 @@
+# This file determines rules for opening different types of files using "lbt open".
+# Rules are ordered by priority, the ones at the top have the highest priority.
+
+# First column is a glob pattern for matching MIME types.
+# Second column is the action: "save" means that the file must be downloaded before opening, "stream" means that the program can open the file as an HTTP stream.
+# Anything after the second column is ignored.
+
+video/mpv	stream
+audio/mpv	stream
+image/*		stream
+text/html	stream
+application/pdf	save
+*		save

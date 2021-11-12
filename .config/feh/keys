@@ -1,0 +1,12 @@
+zoom_in k
+zoom_out j
+next_img l
+prev_img h
+scroll_up C-k
+scroll_down C-j
+scroll_left C-h
+scroll_right C-l
+scroll_left_page 1-h
+scroll_right_page 1-l
+scroll_up_page 1-k
+scroll_down_page 1-j
