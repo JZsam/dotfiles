@@ -32,12 +32,13 @@ alias vim="nvim"
 alias weth="curl 'wttr.in/columbus?u1Q'" 
 alias weth0="curl 'wttr.in/columbus?u1Q'" 
 alias weth3="curl 'wttr.in/columbus?u3Q'" 
-alias yt="ytfzf -t" 
+alias ytf="ytfzf -tf" 
+alias yt="ytfzf -t"
 alias fc="fzfc" 
 alias fs="fzfs" 
 alias fsh="fzfsh"
 alias clear="clear && pfetch" 
-alias ytd="youtube-dl --write-srt --sub-lang en -f 298+140" 
+alias ytd="youtube-dl --write-srt --sub-lang en" 
 alias wtw="wtwitch" 
 alias v="nvim" 
 alias steam="steam-tui" 
@@ -59,6 +60,7 @@ alias gaa="git add -A"
 alias gc="git commit"
 alias gp="git push"
 alias gs="git status"
+alias gpa="git push all"
 alias ac="watch -pn .5 'xdotool click --delay 1 1 ; figlet -c clicking'"
 alias acf="watch -pn .0001 'xdotool click --delay .5 1 ; figlet -c clicking'"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME"
@@ -66,11 +68,14 @@ alias b="bat"
 alias yay="paru"
 alias javar="java -cp (pwd) Main"
 alias mu="mupdf"
+alias fpf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+alias tree="exa -T --color=never"
+alias tt="timetrace"
 # cd aliases
 alias cd.ap="cd $HOME/Documents/apcsa"
 alias cd.ap.j="cd $HOME/Documents/apcsa/java"
-alias cd.ap.j.p="cd $HOME/Documents/apcsa/java/projects"
-alias cd.ap.j.l="cd $HOME/Documents/apcsa/java/labs"
+alias cd.ap.p="cd $HOME/Documents/apcsa/java/projects"
+alias cd.ap.l="cd $HOME/Documents/apcsa/java/labs"
 alias cd.git="cd $HOME/git"
 alias cd.v="cd $HOME/Videos"
 alias cd.v.yt="cd $HOME/Videos/yt"
@@ -81,6 +86,9 @@ function f
 end
 function fv
 	fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs nvim
+end
+function fb
+	fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs bat
 end
 function his
 	history | fzf -i +m | xclip -r -selection clipboard
@@ -97,9 +105,12 @@ end
 function lbtr
 	lbt ls | awk '{print $5}' | fzf -i +m | xargs -0 lbt rm -f
 end
-function gpap
-	git push
-	git push --mirror github
+# function gpa
+# 	git push
+# 	git push --mirror github
+# end
+function ytdf
+	ytfzf -tL |xargs -0 youtube-dl --write-srt --sub-lang en ''
 end
 # Autorun
 pfetch

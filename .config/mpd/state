@@ -1,9 +1,9 @@
-sw_volume: 22
+sw_volume: 28
 audio_device_state:1:pulse
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 873
-time: 248.197000
+state: play
+current: 980
+time: 119.898000
 random: 1
 repeat: 1
 single: 0
@@ -1930,4 +1930,8 @@ playlist_begin
 1915:Toby Fox/DELTARUNE Chapter 2 (Original Game Soundtrack) (Album)/23. NOW'S YOUR CHANCE TO BE A.flac
 1916:Toby Fox/DELTARUNE Chapter 2 (Original Game Soundtrack) (Album)/39. BIG SHOT.flac
 1917:Toby Fox/DELTARUNE Chapter 1 (Original Game Soundtrack) (Album)/39 Don't Forget.flac
+1918:Queen/QueenGreatestHits/Disk2/06Innuendo.flac
+1919:Kanye West/Graduation (Album)/12 Homecoming.flac
+1920:Kanye West/Yeezus (Album)/08 Guilt Trip.flac
+1921:Caravan Palace/º º (Album)/01 Lone Digger.flac
 playlist_end

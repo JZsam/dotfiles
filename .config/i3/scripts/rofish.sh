@@ -4,7 +4,9 @@ set -euo pipefail
 declare -a option=(
 "bash"
 "fish"
+"lua"
 "pwsh"
+"python"
 )
 
 # The choice

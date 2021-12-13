@@ -10,7 +10,7 @@
 		"python"
 	],
 	"java.enabled": true,
-	"java.home": "/usr/lib/jvm/java-16-openjdk",
+	"java.home": "/usr/lib/jvm/java-17-openjdk",
 	"codeLens.enable": true,
 	"java.referencesCodeLens.enabled": true,
 	"java.implementationsCodeLens.enabled": false,

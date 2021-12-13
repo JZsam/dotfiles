@@ -1,0 +1,12 @@
+[submodule ".config/nvim/.config/nvim/plugged/aquarium-vim"]
+	path = .config/nvim/.config/nvim/plugged/aquarium-vim
+	url = https://github.com/frenzyexists/aquarium-vim
+[submodule ".config/nvim/.config/nvim/plugged/todo-comments.nvim"]
+	path = .config/nvim/.config/nvim/plugged/todo-comments.nvim
+	url = https://github.com/folke/todo-comments.nvim
+[submodule ".config/nvim/.config/nvim/plugged/trouble.nvim"]
+	path = .config/nvim/.config/nvim/plugged/trouble.nvim
+	url = https://github.com/folke/trouble.nvim
+[submodule ".config/nvim/.config/nvim/plugged/vim-airline-themes"]
+	path = .config/nvim/.config/nvim/plugged/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
