@@ -46,6 +46,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'folke/todo-comments.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 call plug#end()
 colorscheme doom-one
@@ -63,6 +64,7 @@ aug FileType java
 	au Filetype java map <leader>Rm :make<CR> :vsp<CR> :terminal java -cp $(pwd) Main<CR>
 	au Filetype java map <leader>Rh :make<CR> :vsp<CR> :term java -cp %:p:h %:t:r<CR>
 	au FileType java map <leader>Rc :make<CR> :vsp<CR> :term java -cp $(pwd) %:t:r<CR>
+	au FileType java map <leader>Rr  :make<CR> :vsp<CR> :term java -cp $(pwd) Main<CR>:!rm *.class<CR>
 	au Filetype java map <leader>r :vsp<CR> :terminal java -cp $(pwd) Main<CR>
 aug end
 aug FileType lua
@@ -111,7 +113,7 @@ map <leader>h :tabprevious<CR>
 map <leader>n :tabnew<CR>
 map <leader>N :tabclose<CR>
 map <leader>m :make<CR>
-map <leader>c :copen<CR>
+" map <leader>C :copen<CR>
 map <leader><F10>e :sp<CR> :e ~/.config/nvim/init.vim<CR>
 " map <leader><F10>s :source ~/.config/nvim/init.vim<CR> :PlugInstall<CR>
 map <leader><F10>s :source ~/.config/nvim/init.vim<CR>
@@ -120,8 +122,13 @@ map <leader><F10>s :source ~/.config/nvim/init.vim<CR>
 " map <leader><F10>p :PlugClean<CR> :PlugUpdate<CR> :PlugInstall<CR>
 map <leader>` :Ex<CR>
 map <leader>~ :vsp<CR> :Ex<CR>
-map <leader>g :cd %:p:h<CR>
-" map <leader> :TSHighlightCapturesUnderCursor<CR>
+map <leader>c :cd %:p:h<CR>
+map <leader>ga :G add
+map <leader>gaa :G add -A<CR>
+map <leader>gc :G commit<CR>
+map <leader>gp :G push
+map <leader>gpa :G push all<CR> :G push<CR>
+map <leader>gs :G status<CR>
 "Sources
 source $HOME/.config/nvim/plug-config/coc.vim
 lua require("mod") --Lua Configuration

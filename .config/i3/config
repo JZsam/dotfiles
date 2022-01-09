@@ -3,7 +3,7 @@ set $EDITOR "nvim"
 set $VISUAL "emacs"
 set $BROWSER "librewolf"
 set $mod Mod4
-set $alt mod1
+set $alt Mod1
 # set $terminal alacritty
 set $terminal st
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -102,7 +102,7 @@ bindsym $mod+Shift+m exec ario
 # bindsym $mod+ctrl+Shift+m exec "$terminal ncmpcpp -h 192.168.1.25"
 # extra
 bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+$alt+l exec i3lock i3lock -i ~/.config/i3/i3lock/0188.png -fet
+# bindsym $mod+$alt+l exec i3lock i3lock -i ~/.config/i3/i3lock/0188.png -fet
 bindsym $mod+Shift+a exec authy
 bindsym $mod+ctrl+space sticky toggle
 bindsym $mod+ctrl+Return exec $terminal

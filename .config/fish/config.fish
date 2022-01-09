@@ -32,13 +32,14 @@ alias vim="nvim"
 alias weth="curl 'wttr.in/columbus?u1Q'" 
 alias weth0="curl 'wttr.in/columbus?u1Q'" 
 alias weth3="curl 'wttr.in/columbus?u3Q'" 
-alias ytf="ytfzf -tf" 
-alias yt="ytfzf -t"
+alias ytf="ytfzf -f" 
+alias yt="ytfzf"
 alias fc="fzfc" 
 alias fs="fzfs" 
 alias fsh="fzfsh"
 alias clear="clear && pfetch" 
-alias ytd="youtube-dl --write-srt --sub-lang en" 
+alias ytd="yt-dlp --write-srt --sub-lang en" 
+alias youtube-dl="yt-dlp"
 alias wtw="wtwitch" 
 alias v="nvim" 
 alias steam="steam-tui" 
@@ -60,13 +61,11 @@ alias gaa="git add -A"
 alias gc="git commit"
 alias gp="git push"
 alias gs="git status"
-alias gpa="git push all"
 alias ac="watch -pn .5 'xdotool click --delay 1 1 ; figlet -c clicking'"
 alias acf="watch -pn .0001 'xdotool click --delay .5 1 ; figlet -c clicking'"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME"
 alias b="bat"
 alias yay="paru"
-alias javar="java -cp (pwd) Main"
 alias mu="mupdf"
 alias fpf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias tree="exa -T --color=never"
@@ -112,7 +111,15 @@ end
 function ytdf
 	ytfzf -tL |xargs -0 youtube-dl --write-srt --sub-lang en ''
 end
+function javar
+	javac -g Main.java ; java -cp . Main ; rm -rf *.class
+end
+function gpa
+	git push all
+	git push
+end
 # Autorun
+fish_vi_key_bindings
 pfetch
 #prompt
 starship init fish | source
