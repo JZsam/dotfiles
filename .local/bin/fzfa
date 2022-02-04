@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+set -euo pipefail
+# making the array
+declare -a option=(
+)
+
+# the part where you choose
+choice=$(printf '%s\n' "${option[@]}" | fzf -i +m)
+# if you choose one of the files
+cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+$EDITOR "$cfg"

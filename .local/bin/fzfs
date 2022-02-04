@@ -1,0 +1,40 @@
+#! /usr/bin/env bash
+set -euo pipefail
+# making the array
+declare -a option=(
+"8080.sh - $HOME/.local/bin/8080.sh"
+"art.sh - $HOME/.local/bin/art.sh"
+"closeAll.sh - $HOME/Scripts/closeAll.sh"
+"closeOn10.sh - $HOME/Scripts/closeOn10.sh"
+"config.sh- $HOME/.local/bin/config.sh"
+"del.sh - $HOME/.local/bin/del.sh"
+"flex.sh - $HOME/Scripts/flex.sh"
+"flexless.sh - $HOME/Scripts/flexless.sh"
+"fm6000 - $HOME/.local/bin/fm6000"
+"fun.sh - $HOME/Scripts/fun.sh"
+"fzfc - $HOME/.local/bin/fzfc"
+"fzfs - $HOME/.local/bin/fzfs"
+"fzfsh - $HOME/.local/bin/fzfsh"
+"fzfp - $HOME/.local/bin/fzfp"
+"monitorOn.sh - $HOME/.config/i3/scripts/monitorOn.sh"
+"music.sh - $HOME/Script/music.sh"
+"musicSide.sh - $HOME/Script/musicSide.sh"
+"protonvpnConnect.sh - $HOME/.config/i3/scripts/protonvpnConnect.sh"
+"protonvpnDisconnect.sh - $HOME/.config/i3/scripts/protonvpnDisconnect.sh"
+"qbt.sh - $HOME/.local/bin/qbt.sh"
+"qbtl.sh - $HOME/.local/bin/qbtl.sh"
+"qgis.sh - $HOME/Script/qgis.sh"
+"rofish.sh - $HOME/.config/i3/scripts/rofish.sh"
+"startCalc.sh - $HOME/.config/i3/scripts/startCalc.sh"
+"startPass.sh - $HOME/.config/i3/scripts/startPass.sh"
+"startTelegram.sh - $HOME/.config/i3/scripts/startTelegram.sh"
+"startTerm.sh - $HOME/.config/i3/scripts/startTerm.sh"
+"webcam.sh - $HOME/.config/i3/scripts/webcam.sh"
+"work.sh - $HOME/.config/i3/scripts/work.sh"
+)
+
+# the part where you choose
+choice=$(printf '%s\n' "${option[@]}" | fzf -i +m)
+# if you choose one of the files
+cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+$EDITOR "$cfg"

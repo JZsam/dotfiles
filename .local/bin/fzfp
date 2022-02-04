@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+set -euo pipefail
+# making the array
+declare -a option=(
+"del.sh - $HOME/.local/bin/del.sh"
+"fzfp - $HOME/.local/bin/fzfp"
+"qgis.py - $HOME/Script/python/qgis.py"
+)
+
+# The choice
+choice=$(printf '%s\n' "${option[@]}" | fzf -i +m)
+# this opens the file
+cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+$EDITOR "$cfg"

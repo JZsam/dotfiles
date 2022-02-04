@@ -1,0 +1,20 @@
+#! /usr/bin/env bash
+set -euo pipefail
+# set the list of options
+declare -a option=(
+"1 Mon-Wed"
+"2 Thursday"
+"3 Friday"
+"4 Online"
+)
+choice=$(printf '%s\n' "${option[@]}" | fzf -i +m)
+cfg=$(printf '%s\n' "${option[@]}" | awk '{print $1}')
+if [ $cfg == "1" ];then
+	cat ~/.local/bin/schedules/monWen.md
+elif [ $cfg == "2"]; then
+	cat ~/.local/bin/schedules/thurs.md
+elif [ $cfg == "3" ]; then
+	cat ~/.local/bin/schedules/fri.md
+else
+	surf https://docs.google.com/document/d/1yMLGZL9aokYP2my5XLMMJ94fTHPqL3lTyuY25jakFCM/edit
+fi

@@ -1,0 +1,48 @@
+#! /usr/bin/env bash
+set -euo pipefail
+# making the array
+declare -a option=(
+"amfora - $HOME/.config/amfora/config.toml"
+"bash - $HOME/.bashrc"
+"doom emacs config.el - $HOME/.doom.d/config.el"
+"doom emacs init.el - $HOME/.doom.d/init.el"
+"doom emacs packages = $HOME/.doom.d/packages.el"
+"fish - $HOME/.config/fish/config.fish"
+"fzfc - $HOME/.local/bin/fzfc"
+"htop - $HOME/.config/htop/htoprc"
+"i3 - $HOME/.config/i3/config"
+"jftui - $HOME/.config/jftui/settings"
+"lbt config - $HOME/.config/lbt/config.json"
+"lbt feeds - $HOME/.config/lbt/feeds"
+"lbt mimetypes - $HOME/.config/lbt/mimetypes"
+"mime - $HOME/.config/mimeapps.list"
+"mpd - $HOME/.config/mpd/mpd.conf"
+"mpv input - $HOME/.config/mpv/input.conf"
+"ncmpcpp - $HOME/.config/ncmpcpp/config"
+"newsboat config - $HOME/.newsboat/config"
+"newsboat url - $HOME/.newsboat/urls"
+"nvim - $HOME/.config/nvim/init.vim"
+"polybar - $HOME/.config/polybar/config"
+".profile - $HOME/.profile"
+"powershell - $HOME/.config/powershell/Microsoft.PowerShell_profile.ps1"
+"qutebrowser bookmarks - $HOME/.config/qutebrowser/bookmarks/urls"
+"qutebrowser quickmarks - $HOME/.config/qutebrowser/quickmarks"
+"qutebrowser config.py - $HOME/.config/qutebrowser/config.py"
+"ranger rc - $HOME/.config/ranger/rc.conf"
+"ranger rifle.conf - $HOME/.config/ranger/rifle.conf"
+"ranger scope.sh- $HOME/.config/ranger/scope.sh"
+"streamlink - $HOME/.config/streamlink/config"
+"trackma - $HOME/.config/trackma/config.json"
+"ttrv - $HOME/.config/ttrv/ttrv.cfg"
+"wtwitch config - $HOME/.config/wtwitch/config.json"
+"wtwitch blocklist - $HOME/.config/wtwitch/blocklist"
+"xinitrc - $HOME/.xinitrc"
+"xresources - $HOME/.Xresources"
+"zsh - $HOME/.zshrc"
+)
+
+# the part where you choose
+choice=$(printf '%s\n' "${option[@]}" | fzf -i +m )
+# if you choose one of the files
+cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+$EDITOR "$cfg"
