@@ -9,7 +9,9 @@ require('telescope').setup{
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
         -- ["<C-h>"] = "which_key";
 		["<C-k>"] = "move_selection_previous";
+		["<C-n>"] = "move_selection_previous";
 		["<C-j>"] = "move_selection_next";
+		["<C-p>"] = "move_selection_next";
     }
   },
   pickers = {
